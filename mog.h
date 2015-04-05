@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Guchan Alkan. All rights reserved.
 //
 
-#ifndef mog_mog_h
-#define mog_mog_h
+#ifndef mog_h
+#define mog_h
 
 typedef struct
 {
@@ -17,6 +17,17 @@ typedef struct
 	int cubeCount;
 } Enemy;
 
-Enemy (*getEnemies())[7];
+typedef struct
+{
+	float HP;
+	float speed;
+	float damage;
+	float fireRate;
+	float firePower;
+} Player;
+
+Enemy * getEnemies();
+Player getPlayer();
+void printEnemies();
 
 #endif
